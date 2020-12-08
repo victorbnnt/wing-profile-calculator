@@ -1,0 +1,18 @@
+function[profil] = NACA12(a)
+
+ye=[];
+yi=[];
+ab=[];
+
+
+for x = 0:0.005:(a-0.025)
+    ye=[ye,12/20*(0.2969*sqrt(x)-0.126*x-0.3516*x^2+0.2743*x^3-0.1015*x^4)];
+    yi=[yi,-12/20*(0.2969*sqrt(x)-0.126*x-0.3516*x^2+0.2743*x^3-0.1015*x^4)];
+    ab=[ab,x];
+end;
+
+
+subplot(3,1,1)
+plot(ab,ye,ab,yi);grid on;title('Profil (courbe extrados+courbe intrados');
+subplot(3,1,2)
+plot(ab,(ye+yi)/2);grid on;title(

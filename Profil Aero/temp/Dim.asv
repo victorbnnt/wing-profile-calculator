@@ -1,0 +1,7 @@
+function[Test] = Dim(Pts)
+
+Test = [];
+for i = 1:length(Pts)
+    for j = 1:length(Pts)
+    Test
+end;

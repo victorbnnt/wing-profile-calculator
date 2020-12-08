@@ -1,0 +1,22 @@
+function[Point,x00,y00,Tube0,Tube1,Z] = Point1(a,b,R)
+
+Point = [];
+Tube0=[];
+Tube1=[];
+Z=[];
+m=0;
+
+for j = 0:10:360
+    Point = [Point,(R*exp(i*pi*j/180) + a +b*i)];
+end;
+
+x00=real(Point);
+y00=imag(Point);
+
+for j = 1:10
+    Tube0(j,k)=x00(k);
+    Tube1(j,k)=y00(k);
+    Z(j,k)=m;
+    end;
+    m=m+1;
+end;

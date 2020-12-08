@@ -1,0 +1,19 @@
+function[Extra1,Intra1,xext00,yext00,xint00,yint00] = Point1(a,b,R)
+
+Extra1 = [];
+Intra1 = [];
+l=0;
+for j = 0:1:179
+    Extra1 = [Extra1,(R*exp(i*pi*j/180) + a +b*i)];
+end;
+
+for j = 0:1:179
+    l=j-180;
+    Intra1 = [Intra1,(R*exp(i*pi*l/180) + a +b*i)];
+    l=0;
+end;
+
+xext00=real(Extra1);
+yext00=imag(Extra1);
+xint00=real(Intra1);
+yint00=imag(Intra1);

@@ -1,0 +1,10 @@
+function[z0] = Points(R)
+
+Pts = [];
+
+for j = 10:10:360
+    Pts = [Pts,R*exp((i*pi*j)/180)];
+end;
+
+for j=1:lenght(Pts)
+    

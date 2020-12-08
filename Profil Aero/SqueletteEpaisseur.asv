@@ -1,0 +1,15 @@
+function [Squelette,Epaisseur] = SqueletteEpaisseur(Extrados,Intrados,CYe,CYi)
+
+A=round(real(Extrados(1))*100)/100;
+B=round(real(Extrados(length(Extrados)))*100)/100;
+Squelette = []
+
+for k = B:0.01:A
+      [Ye,Yi] = Val(a,CYe,CYi)
+
+
+
+
+  Squelette = (Extrados+Intrados)/2;
+  Epaisseur = (Extrados-Intrados)/2;
+  

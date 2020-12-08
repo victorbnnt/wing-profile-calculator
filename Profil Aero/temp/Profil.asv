@@ -1,0 +1,29 @@
+%Programme principal%
+%Nous prendrons l = 1 pour tous les calculs
+%Le rayon sera déduit des coordonnées du centre du cercle
+
+
+clc;
+disp('------ ALLURE DE PROFIL D AILE D AVION ------')
+disp('')
+disp('')
+choix = input('Quel type de profil voulez-vous tracer ?');
+disp(' 1.Joukowski          2.Karmann-Trefftz       3.NACA
+%Entrez Les coordonnées du centre du cercle (complexe) : Zc
+a = input('--> Entrez abscisse du centre du cercle : ');
+b = input('--> Entrez ordonnée du centre du cercle : ');
+
+[R] = Centre(a,b);
+[Extra1,Intra1,xext00,yext00,xint00,yint00] = Point1(a,b,R);
+
+
+%Premiere transformation : z0 = (1-Z)/(1+Z)
+
+%[Pts,x0,y0] = Premiere(Point);
+%[Pts1,x1,y1] = Deuxieme(Pts);
+[Extrados,Intrados,xextrados,yextrados,xintrados,yintrados] = Troisieme(a,b,R);
+%plot(xext00,yext00,xint00,yint00);grid on;
+
+plot(xextrados,yextrados,xintrados,yintrados);grid on;
+
+
